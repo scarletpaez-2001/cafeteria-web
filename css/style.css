@@ -1,149 +1,224 @@
+/* ==========================================================================
+   ESTILOS GENERALES Y FUENTES ☕
+   ========================================================================== */
+body {
+    background-color: #fcf9f5;
+    color: #4a3b32;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   TUS ESTILOS ORIGINALES DEL HERO (CAPTURADOS DE TUS FOTOS) 🌟
+   ========================================================================== */
+
 /* Hero Section Styles */
 .hero-section {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #3d2817 0%, #6f4e37 50%, #8b6f47 100%);
-  overflow: hidden;
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #3d2817 0%, #6f4e37 50%, #8b6f47 100%);
+    overflow: hidden;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
 }
 
 /* Granos de café decorativos */
 .coffee-bean {
-  position: absolute;
-  background-color: rgba(61, 40, 23, 0.6);
-  border-radius: 50%;
-  opacity: 0.4;
+    position: absolute;
+    background-color: rgba(61, 40, 23, 0.6);
+    border-radius: 50%;
+    opacity: 0.4;
 }
 
 .coffee-bean-left {
-  width: 200px;
-  height: 250px;
-  top: 10%;
-  left: -50px;
-  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-  animation: float 6s ease-in-out infinite;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: -50px;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    animation: float 6s ease-in-out infinite;
 }
 
 .coffee-bean-right {
-  width: 180px;
-  height: 220px;
-  bottom: 10%;
-  right: -40px;
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  animation: float 7s ease-in-out infinite reverse;
+    width: 180px;
+    height: 220px;
+    bottom: 10%;
+    right: -40px;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: float 7s ease-in-out infinite reverse;
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-20px) rotate(5deg);
-  }
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
 }
 
 /* Títulos y textos */
 .hero-title {
-  font-size: 4.5rem;
-  font-weight: 800;
-  color: #f5deb3;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
-  margin-bottom: 1.5rem;
-  letter-spacing: 2px;
-  font-family: 'Georgia', serif;
-  animation: fadeInDown 1s ease-out;
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: #f5deb3;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    font-family: 'Georgia', serif;
+    animation: fadeInDown 1s ease-out;
 }
 
 .hero-description {
-  font-size: 1.3rem;
-  color: #efe6dd;
-  margin-bottom: 2.5rem;
-  line-height: 1.8;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  animation: fadeInUp 1s ease-out 0.2s both;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+    font-size: 1.3rem;
+    color: #efe6dd;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out;
 }
 
-/* Botón Hero */
+/* El botón redondo de tu Banner */
 .btn-hero {
-  background-color: #7c3aed;
-  border: none;
-  color: white;
-  padding: 15px 50px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  border-radius: 50px;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 8px 15px rgba(124, 58, 237, 0.3);
-  animation: fadeInUp 1s ease-out 0.4s both;
+    background-color: #f5deb3;
+    color: #3d2817;
+    font-weight: 700;
+    padding: 12px 35px;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    animation: fadeInUp 1.2s ease-out;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn-hero:hover {
-  background-color: #6d28d9;
-  transform: translateY(-3px);
-  box-shadow: 0 12px 25px rgba(124, 58, 237, 0.5);
-  color: white;
-}
-
-.btn-hero:active {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 10px rgba(124, 58, 237, 0.4);
+    background-color: transparent;
+    color: #f5deb3;
+    border-color: #f5deb3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(245, 222, 179, 0.3);
 }
 
 /* Animaciones */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Responsive */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   ESTILOS PREMIUM PARA SECCIÓN DE PRODUCTOS Y CONTACTO 🎨
+   ========================================================================== */
+
+.section-title {
+    font-family: 'Georgia', serif;
+    color: #3d2817;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #8b6f47;
+    border-radius: 2px;
+}
+
+/* Tarjetas de café elegantes */
+.premium-card {
+    border-radius: 15px !important;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.premium-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(61, 40, 23, 0.15) !important;
+}
+
+.premium-card img {
+    transition: transform 0.6s ease;
+}
+
+.premium-card:hover img {
+    transform: scale(1.08); /* Zoom sutil e interactivo al pasar el mouse */
+}
+
+.btn-card {
+    background-color: #3d2817;
+    color: #f5deb3;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 8px 25px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.btn-card:hover {
+    background-color: transparent;
+    color: #3d2817;
+    border-color: #3d2817;
+}
+
+/* Inputs del Formulario de Contacto */
+.form-control {
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(245, 222, 179, 0.25) !important;
+    border-color: #f5deb3 !important;
+}
+
+/* ==========================================================================
+   TUS ESTILOS RESPONSIVE ORIGINALES (CAPTURADOS DE TU FOTO) 📱
+   ========================================================================== */
 @media (max-width: 768px) {
-  .hero-section {
-    min-height: auto;
-    padding: 80px 20px;
-  }
-  
-  .hero-title {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero-description {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .btn-hero {
-    padding: 12px 40px;
-    font-size: 1rem;
-  }
-  
-  .coffee-bean-left,
-  .coffee-bean-right {
-    opacity: 0.2;
-  }
+    .hero-section {
+        min-height: auto;
+        padding: 80px 20px;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .btn-hero {
+        padding: 12px 40px;
+        font-size: 1rem;
+    }
+    .coffee-bean-left,
+    .coffee-bean-right {
+        opacity: 0.2; /* Menos opacidad en teléfonos para no molestar la lectura */
+    }
 }
