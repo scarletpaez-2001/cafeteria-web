@@ -1,66 +1,169 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Central - Un café excepcional</title>
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- CSS Personalizado -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-<!-- Hero Section -->
-<section class="hero-section">
-  <div class="coffee-bean coffee-bean-left"></div>
-  <div class="coffee-bean coffee-bean-right"></div>
-  
-  <div class="container h-100 d-flex align-items-center justify-content-center">
-    <div class="row w-100 text-center">
-      <div class="col-lg-8 mx-auto">
-        <h1 class="hero-title">Café Central</h1>
-        <p class="hero-description">Disfruta de un café excepcional en un ambiente acogedor. Nuestros granos seleccionados y preparación artesanal te transportarán a los mejores cafés del mundo.</p>
-        <button class="btn btn-hero">Ver la Carta</button>
+  <!-- ==========================================
+       1. BARRA DE NAVEGACIÓN (NAVBAR)
+       ========================================== -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-dark" href="#" style="font-family: 'Georgia', serif;">☕ Café Central</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#productos">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Menú Digital
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-menu-item dropdown-item" href="#">Cafés Calientes</a></li>
+              <li><a class="dropdown-menu-item dropdown-item" href="#">Pastelería</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-menu-item dropdown-item" href="#">Especiales de Temporada</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar tu café..." aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  </body>
+  <!-- ==========================================
+       2. SECCIÓN PRINCIPAL (HERO) CON TUS GRANOS ANIMADOS
+       ========================================== -->
+  <section class="hero-section">
+    <!-- Tus granos de café interactivos y flotantes -->
+    <div class="coffee-bean coffee-bean-left"></div>
+    <div class="coffee-bean coffee-bean-right"></div>
+
+    <div class="container h-100 d-flex align-items-center justify-content-center">
+      <div class="row w-100 text-center">
+        <div class="col-lg-8 mx-auto">
+          <h1 class="hero-title">Café Central</h1>
+          <p class="hero-description">Disfruta de un café excepcional en un ambiente acogedor.</p>
+          <a href="#productos" class="btn btn-hero">Ver la Carta</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. SECCIÓN DE PRODUCTOS DESTACADOS
+       ========================================== -->
+  <section id="productos" class="py-5 bg-light">
+    <div class="container py-4">
+      <h2 class="text-center fw-bold text-uppercase mb-5 section-title">Nuestras Especialidades</h2>
+      <div class="row g-4">
+        
+        <!-- Producto 1: Espresso Italiano -->
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm premium-card">
+            <div class="card-img-container position-relative overflow-hidden" style="height: 220px;">
+              <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600" class="card-img-top h-100 w-100 object-fit-cover" alt="Espresso Italiano" onerror="this.src='https://images.unsplash.com/photo-1510972527409-cef1903972fa?q=80&w=600'">
+              <span class="position-absolute top-0 end-0 bg-dark text-warning px-3 py-1 m-2 rounded-pill fw-bold">$2.200</span>
+            </div>
+            <div class="card-body p-4 text-center">
+              <h4 class="card-title fw-bold text-dark">Espresso Italiano</h4>
+              <p class="card-text text-muted">Un shot concentrado de granos seleccionados con un aroma intenso y una crema dorada perfecta.</p>
+              <button class="btn btn-card mt-2">Agregar al Pedido</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 2: Cappuccino Supremo -->
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm premium-card">
+            <div class="card-img-container position-relative overflow-hidden" style="height: 220px;">
+              <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=600" class="card-img-top h-100 w-100 object-fit-cover" alt="Cappuccino Supremo" onerror="this.src='https://images.unsplash.com/photo-1534778101976-62847782c213?q=80&w=600'">
+              <span class="position-absolute top-0 end-0 bg-dark text-warning px-3 py-1 m-2 rounded-pill fw-bold">$2.800</span>
+            </div>
+            <div class="card-body p-4 text-center">
+              <h4 class="card-title fw-bold text-dark">Cappuccino Supremo</h4>
+              <p class="card-text text-muted">Equilibrio perfecto de espresso, leche al vapor y una densa capa de espuma con un toque de cacao.</p>
+              <button class="btn btn-card mt-2">Agregar al Pedido</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 3: Tarta de Arándanos -->
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm premium-card">
+            <div class="card-img-container position-relative overflow-hidden" style="height: 220px;">
+              <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=600" class="card-img-top h-100 w-100 object-fit-cover" alt="Tarta de Arándanos" onerror="this.src='https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=600'">
+              <span class="position-absolute top-0 end-0 bg-dark text-warning px-3 py-1 m-2 rounded-pill fw-bold">$3.100</span>
+            </div>
+            <div class="card-body p-4 text-center">
+              <h4 class="card-title fw-bold text-dark">Cheesecake de Arándanos</h4>
+              <p class="card-text text-muted">Suave tarta de queso crema sobre una base crujiente de galleta, bañada en mermelada artesanal.</p>
+              <button class="btn btn-card mt-2">Agregar al Pedido</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. SECCIÓN DE CONTACTO
+       ========================================== -->
+  <section id="contacto" class="py-5 text-white" style="background-color: #3d2817;">
+    <div class="container py-4" style="max-width: 600px;">
+      <h2 class="text-center fw-bold text-uppercase mb-3" style="font-family: 'Georgia', serif; color: #f5deb3;">Reserva tu Mesa</h2>
+      <p class="text-center text-light-50 mb-5">¿Tienes dudas o quieres celebrar un evento con nosotros? Escríbenos y nos pondremos en contacto.</p>
+      
+      <form class="p-4 rounded shadow-lg bg-dark bg-opacity-25 border border-secondary border-opacity-20">
+        <div class="mb-3">
+          <label for="nombre" class="form-label text-warning text-uppercase fs-6">Nombre Completo</label>
+          <input type="text" class="form-control bg-transparent text-white border-secondary" id="nombre" placeholder="Ej: Scarlet Páez" required style="border-radius: 8px;">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label text-warning text-uppercase fs-6">Correo Electrónico</label>
+          <input type="email" class="form-control bg-transparent text-white border-secondary" id="email" placeholder="Ej: scarlet@gmail.com" required style="border-radius: 8px;">
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label text-warning text-uppercase fs-6">Tu Mensaje o Solicitud</label>
+          <textarea class="form-control bg-transparent text-white border-secondary" id="mensaje" rows="4" placeholder="Ej: Me gustaría reservar una mesa para 4 personas este sábado..." required style="border-radius: 8px;"></textarea>
+        </div>
+        <button type="submit" class="btn btn-hero w-100 py-2 text-uppercase fw-bold" style="border-radius: 8px; font-size: 1rem;">Enviar Mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. FOOTER
+       ========================================== -->
+  <footer class="bg-dark text-center text-white-50 py-3 border-top border-secondary border-opacity-25">
+    <small>© 2026 Café Central - Todos los derechos reservados. Desarrollado por Scarlet</small>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 </html>
